@@ -1,5 +1,7 @@
 # AWS Infrastructure
 
+Link to live project: http://udagramprojectdevops.s3-website-us-east-1.amazonaws.com
+
 ## RDS database
 
 Database is created manually in the AWS console.
@@ -34,6 +36,8 @@ The Database is setted up to be public.
 ## S3 Bucket
 
 The S3 bucket is hosting my FrontEnd files.
+
+Link to live project: http://udagramprojectdevops.s3-website-us-east-1.amazonaws.com
 
 The bucket is created manually through the AWS console.
 
