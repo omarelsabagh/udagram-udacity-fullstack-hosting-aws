@@ -10,9 +10,6 @@ jobs:
   build:
     executor:
        name: win/default 
-    machine:
-      # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15"
     steps:
       # install node and checkout code
       - node/install:
