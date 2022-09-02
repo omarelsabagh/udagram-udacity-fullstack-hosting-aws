@@ -31,21 +31,11 @@ jobs:
           name: Front-End build 
           command: |
            npm run frontend:build
-      # TODO: Start the frontend 
-      - run:
-          name: Front-End Start
-          command: |
-            npm run frontend:start
       # TODO: Build the backend API      
       - run:
           name: API Build
           command: |
             npm run api:build
-      # TODO: Start the backend API      
-      - run:
-          name: API Start
-          command: |
-            npm run api:start
   # deploy step will run only after manual approval
   deploy:
     docker:
