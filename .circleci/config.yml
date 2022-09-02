@@ -9,8 +9,7 @@ orbs:
 jobs:
   build:
    
-    executor:
-      name: win/default
+    executor: win/server-2022
     steps:
       # install node and checkout code
       - node/install:
