@@ -11,10 +11,11 @@
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
-    "clean": "del /Q \"www/\" || VER>NUL",
+    "clean": "rm -rf www/ || true",
     "deploy": "npm run build && eb list && eb use Mygoodapp-env && eb codesource local && eb deploy",
-    "build": "npm install . && npm run clean && tsc && copy \"src/config\" && copy \"www/config\" && copy .elasticbeanstalk \"www/.elasticbeanstalk\" && copy .npmrc \"www/.npmrc\" && copy package.json \"www/package.json\" && cd www && 7z a -tzip Archive.zip . && cd ..",
+    "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && 7z a -tzip  Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "keywords": [],
   "author": "Omar",
