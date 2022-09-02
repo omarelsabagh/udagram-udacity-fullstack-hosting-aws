@@ -34,7 +34,7 @@ jobs:
           command: |
            npm run frontend:build
       # TODO: Build the backend API  
-      - win/server-2022    
+       executor: win/server-2022 
       - run:
           name: API Build
           command: |
