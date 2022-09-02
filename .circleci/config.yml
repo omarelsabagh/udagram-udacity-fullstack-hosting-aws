@@ -9,21 +9,7 @@ orbs:
 jobs:
   build:
     executor:
-       name: win/default 
-     setupNvm: &setupNvm
-  name: Setup NVM
-  command: |
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-    echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV
-    echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
-setupNode: &setupNode
-  name: Setup Node
-  command: |
-    nvm install 12.13
-    nvm use node
-    node -v
-    npm i -g npm@4.15.0
-    npm -v  
+       name: win/default   
     steps:
       # install node and checkout code
       - node/install:
