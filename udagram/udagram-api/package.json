@@ -12,7 +12,7 @@
     "dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "del \"www/\" || VER>NUL",
-    "deploy": "npm run build && eb list && eb use Udagramproj-env && eb codesource local && eb deploy",
+    "deploy": "npm run build && eb list && eb use Mygoodapp-env && eb codesource local && eb deploy",
     "build": "npm install . && npm run clean && tsc && copy \"src/config\" && copy \"www/config\" && copy .elasticbeanstalk \"www/.elasticbeanstalk\" && copy .npmrc \"www/.npmrc\" && copy package.json \"www/package.json\" && cd www && 7z a -tzip Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
