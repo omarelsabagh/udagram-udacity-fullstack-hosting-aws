@@ -45,6 +45,8 @@ Bucket name: udagramprojectdevops
 
 Deployment the FrontEnd code to the bucket is made through the script:
 
+#### all scripts must run on Linux Bash or Mac OS environment neither try to match them with Windows environment
+
 `"deploy": "npm install -f && npm run build && chmod +x \"bin/deploy.sh\" &&  \"bin/deploy.sh\""`
 `npm run deploy`
 
