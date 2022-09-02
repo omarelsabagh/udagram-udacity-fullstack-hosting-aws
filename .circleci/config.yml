@@ -31,11 +31,6 @@ jobs:
           name: Front-End build 
           command: |
            npm run frontend:build
-      # TODO: Test the frontend
-      - run:
-          name: Front-End test
-          command: |
-            npm run frontend:test
       # TODO: Lint the frontend 
       - run:
           name: Front-End Lint
