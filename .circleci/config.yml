@@ -12,7 +12,7 @@ jobs:
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15"
-     executor:
+  executor:
        name: win/default 
     steps:
       # install node and checkout code
