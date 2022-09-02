@@ -8,6 +8,8 @@ orbs:
   # different jobs are calles later in the workflows sections
 jobs:
   build:
+   executor:
+      name: win/default
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15"
